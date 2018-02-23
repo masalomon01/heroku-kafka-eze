@@ -1,6 +1,6 @@
-# Heroku Kafka Easy
+# Heroku Kafka Easy-E
 
-**THIS IS AN UNOFFICIAL PACKAGE**
+**UNOFFICIAL PACKAGE**
 
 Heroku Kafka is a python package to help you get setup quickly and easily with Kafka on Heroku. There is an [offical package](https://github.com/heroku/kafka-helper) however it has not been does not seem to be maintained anymore. 
 
@@ -10,16 +10,17 @@ Heroku Kafka is a python package to help you get setup quickly and easily with K
 The easiest way to install the package is through pip.
 ```
 pip install heroku-kafka-eze
+pip3 install heroku-kafka-eze
 ```
 
 ## Usage
 
 This package uses the [kafka-python package](https://github.com/dpkp/kafka-python) and the `HerokuKafkaProducer` and `HerokuKafkaConsumer` classes both inherit from the kafka-python base classes, and will contain all the same methods.
+It also uses the [heroku3 package] (https://github.com/martyzz1/heroku3.py) it's a python wrapper for the heroku api. 
 
 Note: You can use this package on locally too. 
 
-Note: To test it is working on local I would install [heroku-kafka-util](https://github.com/osada9000/heroku-kafka-util) so you can see messages are being sent or simply use heroku CLI and 
-install the heroku-kafka plugin.
+Note: To test it is working on local I would simply use heroku CLI with the heroku-kafka plugin or install [heroku-kafka-util](https://github.com/osada9000/heroku-kafka-util) so you can see messages are being sent.
 
 ### Producer
 
@@ -126,8 +127,7 @@ TOPIC2=""
 
 ## Tests
 Please make sure that any extra code you write comes with a test, it doesn't need to be over the top but just check what you have written works.
-
-All tests at the moment require a working kafka setup as its pretty hard to check it is connecting correctly without them. This means it will also require an internet connection.
+All tests at the moment require a working kafka setup as its pretty hard to check it is connecting correctly without them.
 
 To run the tests:
 ```bash
